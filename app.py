@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_wtf.csrf import CSRFProtect
 from flask_cors import CORS
-from db import get_songs
+#from db import get_songs
 import os 
 
 app = Flask(__name__)
