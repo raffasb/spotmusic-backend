@@ -73,6 +73,13 @@ jobs:
     # needs: Deploy-Homolog
     runs-on: ubuntu-latest
 
+    env:
+      CLOUD_SQL_USERNAME: '${{ secrets.CLOUD_SQL_USERNAME }}'
+      CLOUD_SQL_PASSWORD: '${{ secrets.CLOUD_SQL_PASSWORD }}'
+      CLOUD_SQL_DATABASE_NAME: '${{ secrets.CLOUD_SQL_DATABASE_NAME }}'
+      DB_LOCAL_HOST: '${{ secrets.DB_LOCAL_HOST }}'
+      CLOUD_SQL_CONNECTION_NAME: '${{ secrets.CLOUD_SQL_CONNECTION_NAME }}'
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3 # https://github.com/actions/checkout
