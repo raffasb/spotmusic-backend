@@ -79,6 +79,7 @@ jobs:
       CLOUD_SQL_DATABASE_NAME: '${{ secrets.CLOUD_SQL_DATABASE_NAME }}'
       DB_LOCAL_HOST: '${{ secrets.DB_LOCAL_HOST }}'
       CLOUD_SQL_CONNECTION_NAME: '${{ secrets.CLOUD_SQL_CONNECTION_NAME }}'
+      GOOGLE_PROJECT_ID: '${{ vars.GOOGLE_PROJECT_ID }}'
 
     steps:
       - name: Checkout Repo
@@ -107,3 +108,4 @@ jobs:
           echo "CLOUD_SQL_DATABASE_NAME: $CLOUD_SQL_DATABASE_NAME"
           echo "DB_LOCAL_HOST: $DB_LOCAL_HOST"
           echo "CLOUD_SQL_CONNECTION_NAME: $CLOUD_SQL_CONNECTION_NAME"
+          echo "GOOGLE_PROJECT_ID: $GOOGLE_PROJECT_ID"
