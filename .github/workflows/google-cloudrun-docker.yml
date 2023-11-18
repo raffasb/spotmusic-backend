@@ -99,3 +99,11 @@ jobs:
 
       - name: Test Prod
         run: 'curl "${{ steps.prod-deploy.outputs.url }}"'
+
+      - name: Exibir Variaveis de Ambiente
+        run: |
+          echo "CLOUD_SQL_USERNAME: $CLOUD_SQL_USERNAME"
+          echo "CLOUD_SQL_PASSWORD: $CLOUD_SQL_PASSWORD"
+          echo "CLOUD_SQL_DATABASE_NAME: $CLOUD_SQL_DATABASE_NAME"
+          echo "DB_LOCAL_HOST: $DB_LOCAL_HOST"
+          echo "CLOUD_SQL_CONNECTION_NAME: $CLOUD_SQL_CONNECTION_NAME"
