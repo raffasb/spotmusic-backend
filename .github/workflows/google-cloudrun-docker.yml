@@ -70,7 +70,7 @@ jobs:
   #       run: 'curl "${{ steps.homolog-deploy.outputs.url }}"'
 
   Deploy-Production:
-    needs: Deploy-Homolog
+    # needs: Deploy-Homolog
     runs-on: ubuntu-latest
 
     steps:
