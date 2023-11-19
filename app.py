@@ -10,9 +10,13 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*", "send_wildcard": "False"}}) # Compliant
 csrf = CSRFProtect(app) 
 
-@app.route("/")
-def pagina_inicial():
-    return "Hello World, this is our MBA group from 11ASOO - Hackathon"    
+@app.route('/')
+def songs():
+    return get_songs()
 
-# if __name__ == '__main__':
-#     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+#@app.route("/")
+#def pagina_inicial():
+#    return "Hello World, this is our MBA group from 11ASOO - Hackathon"    
+
+if __name__ == '__main__':
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
